@@ -6,7 +6,7 @@ import { useSettings } from '../stores/SettingsStore';
 const { Webpack } = BdApi;
 const { Filters } = Webpack;
 
-const margins = BdApi.findModuleByProps('marginLarge');
+const margins = Webpack.getByKeys('marginBottom40')
 
 const FormSection = Webpack.getModule(Filters.byStrings('.titleClassName', '.sectionTitle'), { searchExports: true });
 const FormItem = Webpack.getModule(m => Filters.byStrings('.titleClassName', '.required')(m?.render), { searchExports: true });
